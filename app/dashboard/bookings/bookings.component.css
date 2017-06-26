@@ -1,0 +1,515 @@
+tr {
+    height: 120px;
+        
+}
+
+.content.table-responsive.table-full-width{
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.table-full-width {
+     margin-left: 0px; 
+    /*margin-right: -15px;*/
+}
+
+.card .content {
+    padding: 0px;
+}
+
+.t-body {
+    overflow-x: scroll;
+}
+.ui-inputtext  {
+    text-align: center;
+}
+
+.input.undefined.ui-inputtext.ui-corner-all.ui-state-default.ui-widget.ui-state-filled {
+    text-align: center;
+}
+
+.input{
+    text-align: center;
+}
+
+.oneDayChange{
+    background: transparent;
+    color: #105496;
+    border-style: none;
+}
+
+.time-headings {
+    width: 140px;
+    vertical-align: middle;
+    border-right: 2px solid #ddd;
+}
+
+.top-heading {
+    font-weight: bold;
+    color: black;
+    border: 1px solid #EDECED;
+    /*background-color: #fcfcfc;*/
+
+}
+
+
+
+.col-sm-4{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.datepickerOutlet {
+    /*float: right;
+    margin-right: 50px;*/
+    margin-top: 12px;
+
+    text-align: center;
+}
+.titleHeadingDay{
+    
+}
+
+.calendarToggle {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    border-style: none;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    padding-top: 3px;
+    padding-right: 10px;
+    border-radius: 8px;
+    outline: none;
+    /*font-weight: 400;*/
+
+}
+
+.fa {
+    display: inline;
+}
+
+th {
+    text-align: center;
+    margin: 0px;
+    width: 169px;
+}
+
+.card .light {
+    height: 120px;
+    width: 169px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: lightgray;
+    
+}
+
+.card .light-green {
+    height: 120px;
+    width: 169px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: lightgreen;
+    
+}
+
+.card .light-yellow {
+    height: 120px;
+    width: 169px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: lightskyblue;
+    
+}
+
+.blue a {
+    color: white;
+    font-weight: bold;
+}
+
+.blue {
+    height: 120px;
+    width: 169px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: lightskyblue;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px white;
+    border: 2px solid white;
+    
+}
+
+.red{
+    height: 120px;
+    width: 169px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: #f28ea9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px white;
+    border: 2px solid white;
+}
+
+.red a {
+    color: white;
+    font-weight: bold;
+}
+
+.lightGreen {
+    height: 120px;
+    width: 169px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: lightgreen;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px white;
+    border: 2px solid white;
+
+}
+.lightGreen a{
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    border-right: 2px solid white;
+    
+    width: 450px;
+}
+/*
+tr:nth-child(2) {
+    background: rgba(0, 0, 0, .15);
+}
+
+tr:nth-child(4) {
+    background: rgba(0, 0, 0, .15);
+}
+
+tr:nth-child(6) {
+    background: rgba(0, 0, 0, .15);
+}
+
+tr:nth-child(2) {
+    background: rgba(0, 0, 0, .15);
+}
+
+tr:nth-child(2) {
+    background: rgba(0, 0, 0, .15);
+}
+
+tr:nth-child(2) {
+    background: rgba(0, 0, 0, .15);
+}*/
+
+
+
+td:nth-child(2) {
+   background: white;
+   border-right: 2px solid lightgrey;
+   border-bottom: 1px solid lightgray;
+}
+
+td:nth-child(3) {
+     background: rgba(0, 0, 0, .05);
+     border-right: 2px solid lightgray;
+     border-bottom: 1px solid lightgray;
+
+}
+
+td:nth-child(4) {
+   background: white;
+   border-right: 2px solid lightgray;
+   border-bottom: 1px solid lightgray;
+   
+}
+
+td:nth-child(5) {
+     background: rgba(0, 0, 0, .05);
+     border-right: 2px solid lightgray;
+     border-bottom: 1px solid lightgray;
+   
+}
+
+td:nth-child(6) {
+   background: white;
+   border-right: 2px solid lightgrey;
+   border-bottom: 1px solid lightgray;
+   
+}
+
+td:nth-child(7) {
+    background: rgba(0, 0, 0, .05);
+     border-right: 2px solid lightgray;
+     border-bottom: 1px solid lightgray;
+   
+}
+
+td:nth-child(8) {
+   background: white;
+   border-right: 2px solid lightgrey;
+   border-bottom: 1px solid lightgray;
+   
+}
+
+
+
+.plain {
+    height: 120px;
+    width: 169px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: transparent;
+    border-radius: 8px;
+    /*border: 1px solid lightgray;
+    box-shadow: 1px 1px .5px lightgray;*/
+    
+}
+
+ .plain a {
+    color: black;
+ }
+
+.oneDayChangeRight{
+    background: transparent;
+    color: #105496;
+    border-style: none;
+    margin-left: 27px;
+}
+
+.title {
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card .light-red {
+    height: 120px;
+    width: 169px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: #f28ea9;
+    
+}
+
+
+
+.category {
+    text-align: center;
+        /*margin-right: 50px;*/
+}
+
+.back-one-day {
+    padding-right: 8px;
+}
+
+.forward-one-day {
+    padding-left: 8px;
+}
+
+
+.card .light-orange {
+    height: 120px;
+    width: 169px;
+    margin: 0px;
+    text-align: center;
+    padding-top: 16px;
+    background-color: #fcc771;
+    
+}
+
+img {
+    border-radius: 50%;
+    max-width: 80px;
+    margin: 20px;
+}
+
+.adjusted-p {
+    text-align: left;
+    margin: 10px;
+    color: #333;
+}
+
+.adjusted-pwhite {
+    /*text-align: left;*/
+    margin: 10px; 
+    color: #444;
+}
+
+.btn {
+     width: 30px;
+     height: 30px;
+     margin:auto;
+    text-align:center;
+    padding: 0px;
+    margin-left: 3px;
+     
+}
+
+.fa-edit {
+     margin:auto;
+    text-align:center;
+    padding: 0px;
+}
+
+p {
+    
+}
+
+/*td:nth-child(1){
+        border-right: 2px solid #ddd;
+}*/
+
+
+td {
+    border: 1px solid #EDECED;
+    width: 140px;
+}
+
+a {
+    font-size: 16px;
+}
+
+ .person-that-booked {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+}
+
+.nineAm {
+    border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+    background: yellow;
+
+}
+
+.nine30Am {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.tenAm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.ten30am {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.elevenAm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.eleven30am {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.twelveAm{
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.twelve30pm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.onePm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.twoPm{
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.two30pm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.threePm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.three30pm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+  
+
+}
+
+.fourPm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+   
+
+}
+
+.four30pm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+   
+
+}
+
+.fivePm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.five30pm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+.sixPm {
+     border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+
+}
+
+
+
+.now {
+    border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+}

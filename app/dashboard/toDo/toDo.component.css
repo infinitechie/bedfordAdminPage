@@ -1,0 +1,21 @@
+td {
+    text-align: center;
+}
+
+.addTaskBtn {
+    float: right;
+    background-color: mediumseagreen;
+    color: white;
+    /*border: 1px solid white;*/
+    border-style: none;
+    border-radius: 8px;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+button:focus {outline:0;}

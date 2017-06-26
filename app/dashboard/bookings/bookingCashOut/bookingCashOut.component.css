@@ -1,0 +1,86 @@
+.modal-footer {
+    text-align: center;
+}
+
+.modal-body {
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin: 20px;
+    
+}
+
+.row {
+    margin: 15px;
+}
+
+.emailInput {
+    margin-top: 15px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    line-height: 30px;
+    padding: 7px;
+}
+
+.buttonsForTopUp {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.left {
+    float: left;
+    display: block;
+}
+
+.right {
+    float:right;
+    display: block;
+}
+
+.form-group {
+    /*margin-right: 40px;*/
+    padding: 15px;
+}
+
+.form-group.number {
+    float: right;
+}
+
+.form-group.email {
+    float: left;
+}
+
+.form-inline {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 70px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+form {
+    text-align: center;
+}
+
+.backroundWhite {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 15px;
+    /* padding-right: 15px; */
+    padding-bottom: 1px;
+    /* padding-left: 15px; */
+    border-radius: 16px;
+    border: 1px solid lightgrey;
+    box-shadow: 0.7px 0.7px 0.7px #888;
+    background-color: white;
+}
+
+th {
+    padding-left: 15px;
+}

@@ -1,0 +1,426 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <bookingCashOut #bookingCashOut></bookingCashOut>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" [@cardtable1]>
+                    
+                    <div class="headerRow">
+                        <div class="col-sm-4">
+                            <!--<button [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.deleteUser(customer)">sdddssdds</button>-->
+                        </div>
+
+                        <div class="col-sm-4">
+                        <h4 class="title"> <span class="titleHeadingDay">{{daySelected}}'s Bookings</span></h4>
+    <div class="datepickerOutlet"><button (click)="getYesterdayBooking()" class="oneDayChange"><</button> <p-calendar [(ngModel)]="currentDate" (ngModelChange)="onChange(currentDate)"  dateFormat="yy-mm-dd" [showIcon]="true"></p-calendar> <button (click)="getTomorrowBooking()" class="oneDayChangeRight">></button> </div>
+       <!--<span style="margin-left:35px">{{date3|date}}</span>-->
+                       
+                       </div>
+
+                        <div class="col-sm-4">
+      
+    </div>
+                    </div>
+                    
+                    
+                    <div class="content table-responsive table-full-width">
+                        <table id="myTable" class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="top-heading">Time</th>
+                                    <th *ngFor="let staff of staffArray">
+                                        <img src="assets/img/faces/face-0.jpg"alt=""> <br>
+                                    {{staff.name}}</th> 
+                                    <!--<th> <img src="assets/img/faces/face-4.jpg"alt=""> <br> 
+                                    Carter Hugg</th>
+                                    <th> <img src="assets/img/faces/face-3.jpg"alt=""> <br>
+                                    Peter Kane</th>
+                                    <th> <img src="assets/img/faces/face-6.jpg"alt=""> <br>
+                                    Barry Povic</th>
+                                    <th> <img src="assets/img/faces/face-7.jpg"alt=""> <br>
+                                    Barry Jones</th>-->
+                                </tr>
+                            <tbody>
+                                <tr [class.nineAm]="nineAm"> 
+                                    <th class="time-headings">9:00am</th>
+                                    <td *ngFor="let booking of bookingArray0900"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#"></a>
+                                        <hr>
+                                        <p class="adjusted-pwhite"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <!--<button class="btn btn-warning btn-sm btn-fill pull-left" rel="tooltip" title="Take Break">
+                            <i class="fa fa-coffee"></i>
+                        </button>-->
+
+                         <!--<button (click)="bookingCashOut.getUserNow()" class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                             
+                            <i class="fa fa-money"></i>
+                        </button>-->
+                        
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                  
+                                </tr>
+
+
+                                                <tr [class.nine30Am]="nine30Am">
+                                    <th class="time-headings">9:30am</th>
+                                   
+                                   <td *ngFor="let booking of bookingArray0930"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">...</a>
+                                        <hr>
+                                        <p class="adjusted-pwhite"><span *ngIf="booking.service == null">{{booking.time}}</span><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <!--<button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>-->
+
+                        <!--<button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>-->
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                        <tr [class.tenAm]="tenAm">
+                                    <th class="time-headings">10:00am</th>
+                             
+                                           <td *ngFor="let booking of bookingArray1000"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <!--<button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>-->
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                                   <tr [class.ten30Am]="ten30am">
+                                    <th class="time-headings">10:30am</th>
+
+                                     <td *ngFor="let booking of bookingArray1030"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <!--<button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-edit"></i>
+                        </button>-->
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+                                    
+                                </tr>
+
+                                 <tr [class.elevenAm]="elevenAm">
+                                    <th class="time-headings">11:00am</th>
+                                   
+                                              <td *ngFor="let booking of bookingArray1100"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                          
+                                </tr>
+
+
+                                                <tr [class.eleven30am]="eleven30am">
+                                    <th class="time-headings">11:30am</th>
+                                    <td *ngFor="let booking of bookingArray1130"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-left" rel="tooltip" title="Take Break">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Make Appointment">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                  
+                                </tr>
+
+                        <tr [class.twelveAm]="twelveAm">
+                                    <th class="time-headings">12:00pm</th>
+                                   
+                                   <td *ngFor="let booking of bookingArray1200"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+
+                                    
+                                </tr>
+
+                                   <tr [class.twelve30pm]="twelve30pm">
+                                    <th class="time-headings">12:30pm</th>
+                                    
+
+                                     <td *ngFor="let booking of bookingArray1230"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <!--<button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-edit"></i>
+                        </button>-->
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+                                   
+                                          
+                                </tr>
+
+                                     <tr [class.onePm]="onePm">
+                                    <th class="time-headings">13:00pm</th>
+                                   
+                                   <td *ngFor="let booking of bookingArray1300"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+                                    
+                                </tr>
+
+                                                <tr [class.one30pm]="one30pm">
+                                    <th class="time-headings">13:30pm</th>
+                                   
+
+                                     <td *ngFor="let booking of bookingArray1330"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+
+                        <tr [class.twoPm]="twoPm">
+                                    <th class="time-headings">14:00pm</th>
+                                  
+                                           <td *ngFor="let booking of bookingArray1400"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                                   <tr [class.two30pm]="two30pm">
+                                    <th class="time-headings">14:30pm</th>
+                                    <td *ngFor="let booking of bookingArray1430"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-left" rel="tooltip" title="Take Break">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Make Appointment">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                                 <tr [class.threePm]="threePm">
+                                    <th class="time-headings">15:00pm</th>
+                             
+                        
+                                           <td *ngFor="let booking of bookingArray1500"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                                                <tr [class.three30pm]="three30pm">
+                                    <th class="time-headings">15:30pm</th>
+                                
+
+                                     <td *ngFor="let booking of bookingArray1530"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+                                    
+                                </tr>
+
+                        <tr [class.fourPm]="fourPm">
+                                    <th class="time-headings">16:00pm</th>
+                                    
+                                   <td *ngFor="let booking of bookingArray1600"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Cash Out">
+                            <i class="fa fa-money"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Cancel Appointment">
+                            <i class="fa fa-times"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                   <tr [class.four30pm]="four30pm">
+                                    <th class="time-headings">16:30pm</th>
+                                    <td *ngFor="let booking of bookingArray1630"><div [attr.data-target]=" '#' + bookingCashOut.modalId" data-toggle="modal" (click)="bookingCashOut.loggUser(booking, staffArray)" [ngClass]="setClass(booking)">
+                                        <a *ngIf="booking.customer"  href="#">{{booking.customer}}</a>
+                                        <a *ngIf="booking.customer == null" href="#">Not Booked</a>
+                                        <hr>
+                                        <p class="adjusted-p"><span *ngIf="booking.service != null"> {{booking.service}}</span>
+                        <button class="btn btn-warning btn-sm btn-fill pull-left" rel="tooltip" title="Take Break">
+                            <i class="fa fa-coffee"></i>
+                        </button>
+
+                         <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Make Appointment">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                                        </p>
+                   
+                                        </div>
+                                    </td>
+                                   
+                                    
+                                </tr>
+                             
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+
+</div>
+    </div>
+     
+
+    
+
+  
+

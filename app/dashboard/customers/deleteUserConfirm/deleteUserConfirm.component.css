@@ -1,0 +1,21 @@
+.modal-content {
+    text-align: center;
+    background-color: white;
+   
+    height: 200px; 
+    
+    border-radius: 16px;
+    /*width: 80%;*/
+
+
+}
+
+.modal-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    margin: 35px;
+}

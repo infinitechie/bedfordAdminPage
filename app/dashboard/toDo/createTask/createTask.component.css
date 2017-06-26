@@ -1,0 +1,141 @@
+.form-group {
+    /*margin-right: 40px;*/
+    padding: 15px;
+}
+
+.form-group.number {
+    float: right;
+}
+
+.form-group.email {
+    float: left;
+}
+
+.modal-content {
+    border-radius: 16px;
+}
+.modal-body {
+    padding: 2.5rem 5rem;
+    /*text-align: center;*/
+    /*box-shadow: 0.9px 0.9px 0.9px 0.9px lightgrey;*/
+    border: 1px solid lightgrey;
+    background: #f8f8f8;
+    margin: 40px;
+    border-radius: 16px;
+}
+#title-form-group {
+    /*margin-top: 1rem;*/
+}
+#title-field {
+    font-size: 1.3rem;
+    /*border: none;*/
+    border: 1px solid lightgrey;
+    box-shadow: 0.7px 0.7px 0.7px #888;
+    /*text-transform: uppercase;*/
+}
+
+#desc-area {
+      font-size: 1.3rem;
+    /*border: none;*/
+    border: 1px solid lightgrey;
+    box-shadow: 0.7px 0.7px 0.7px #888;
+}
+#status-dropdown {
+    text-align-last: center;
+}
+#title-field,
+#severity-dropdown {
+    padding: 0;
+}
+#severity-form-group {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#severity-dropdown {
+    margin: 1rem 0 1.5rem 0;
+    color: #CCC;
+}
+.modal-footer {
+    border: none;
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 10px;
+}
+/* Validation */
+textarea.ng-invalid.ng-dirty {
+    border-color: #C62828;
+    transition: border-color 0.2s ease;
+}
+#title-field.ng-invalid.ng-dirty {
+    border-left: 5px solid #C62828;
+    padding-left: 5px;
+    transition: border-width 0.2s ease;
+}
+
+.modal-backdrop {
+  z-index: -1;
+}
+
+/*.form-control{
+    padding-left: 3px;
+}
+
+.sr-only{
+    padding-left: 10px;
+    color: deepskyblue;
+}*/
+
+#title-field {
+    padding-left: 5px;
+    color: #2e6696;
+}
+
+h2 {
+    color: #424242;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+label {
+    color: #424242;
+    padding-right: 5px;
+}
+
+.table.table-hover.table-striped {
+
+    /*background-color: white;
+    border: 15px;
+    border-radius: 8px;*/
+}
+
+.backroundWhite {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    border-radius: 16px;
+    /*text-align: center;*/
+
+     
+    /*border: none;*/
+    border: 1px solid lightgrey;
+    box-shadow: 0.7px 0.7px 0.7px #888;
+}
+
+h3 {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    /*text-align: center;*/
+}
+
+.paddedLabel {
+    padding-right: 13px;
+}
+
+input {
+     text-transform: capitalize;
+}

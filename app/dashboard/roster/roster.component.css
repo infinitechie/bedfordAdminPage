@@ -1,0 +1,23 @@
+.main-content {
+    background-color: white;
+}
+
+.fc-other-month.fc-day-number { 
+    display:none;
+    }
+
+.fc-day-grid-event.fc-content {
+    background-color: springgreen;
+}
+
+.fc-day-grid-event {
+    background-color: springgreen;
+}
+
+.fc-day-grid-event .fc-content {
+    background-color: springgreen;
+}
+
+.fc-content {
+    background-color: springgreen;
+}

@@ -1,0 +1,170 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card">
+                <!--<p-listbox [options]="cities" [(ngModel)]="selectedCities" multiple="multiple" checkbox="checkbox" filter="filter"></p-listbox>-->
+                <form [formGroup]="servicesForm">  
+                    <fieldset class="form-inline">
+                        <h2 *ngIf="deals=='unClicked'">Choose One of the Below</h2>
+                        <h2 *ngIf="service=='yes'">Add Your New Service</h2>
+                        <h2 *ngIf="deals=='yes'">Add Your New Deal</h2>
+                        <div *ngIf="deals=='unClicked'"  class="choiceButtons">
+                        <button class="dealButton" *ngIf="deals=='unClicked'" (click)="setDealsClicked()">Add Deal</button>
+                        <button class="serviceButton" *ngIf="service=='unClicked'" (click)="setServiceClicked()">Add Service</button>
+                         
+                        </div>
+
+
+                    <div *ngIf="service=='yes'" class="form-group number" id="title-form-group">
+                            <label for="title-field"> Service Name</label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" style="margin-left: 6px;" class="form-control" id="title-fieldBig" placeholder="User Name" formControlName="addService">
+
+                           
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+                    </div>
+
+                     <div *ngIf="service=='yes'" class="form-group email" id="title-form-group">
+                            <label for="title-field" style="vertical-align: top;padding-top: 5px;padding-right: 10px;"> Service Description </label>
+                            <label for="title-field" class="sr-only">name</label>
+                        
+                            <textarea type="text" class="form-control" id="title-fieldBig" rows="4" placeholder="Add Description for your Service" formControlName="addServiceDescription"></textarea>
+                           
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+                    </div>
+
+                     <div *ngIf="service=='yes'" class="form-group number" id="title-form-group">
+                            <label for="title-field"> Service Cost </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" style="margin-left: 6px;" class="form-control" id="title-fieldBig" placeholder="User Name" formControlName="serviceCost">
+
+                           
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+                    </div>
+
+
+
+<div *ngIf="deals=='yes'" class="form-group number" id="title-form-group">
+                            <label for="title-field"> Deal Name </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" style="margin-left: 6px;" id="title-fieldBig" placeholder="User Name" formControlName="addDeal">
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+</div>
+
+
+<div *ngIf="deals=='yes'" class="form-group email" id="title-form-group">
+                            <label for="title-field" style="vertical-align: top;padding-top: 5px;padding-right: 10px;"> Deal Description</label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <textarea type="text" class="form-control" id="title-fieldBig" rows="4" placeholder="Add Description for your Deal" formControlName="addDealDescription"></textarea>
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+</div>
+<div *ngIf="deals=='yes'" class="form-group number" id="title-form-group">
+                            <label for="title-field"> Deal Cost </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" style="margin-left: 6px;" id="title-fieldBig" placeholder="User Name" formControlName="dealCost">
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+</div>
+</fieldset>
+                </form>
+                
+                <div *ngIf="service != 'unClicked'" class="cardLight">
+                    <table class="table table-hover">
+                                    <thead>
+                                        
+                                    	<th>Staff Members</th>
+                                        <th *ngIf="allSelected">Selected</th>
+                                        <th><button class="addAllButton" (click)="selectedAllUsers()">Select All</button></th>
+                                    	
+                                    
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let staff of staffArray" (click)="addToArray(staff)" [class.highlighted]="staff.highlighted ===true">
+                                    
+                                        	<td><h4>{{staff.name}}</h4></td>
+                                            <td *ngIf="allSelected">Selected</td>
+                                            
+                                            <td class="td-actions text-right">
+                                             <button type="button" rel="tooltip" title="Loyal Customer" class="addMember">
+                                                <h5>Add Member</h5>
+                                            </button>
+                                        </td>
+                                        </tr>
+                                          
+                                 
+                          
+                                    </tbody>
+                                </table>
+                                
+                                </div>
+                                <button *ngIf="service != 'unClicked'" class="submitButton" (click)="submit()">Submit</button>
+                                <button *ngIf="service != 'unClicked'" class="cancelButton" (click)="cancelButton()">Cancel</button>
+                                
+
+            </div>
+            <div class="lcard">
+                
+
+                  <table class="table table-hover table-striped">
+                                    <thead>
+                                        <!--<th>ID</th>-->
+                                    	<th>Name</th>
+                                        <th>Description</th>
+                                    	<th>Cost</th>
+                                        
+                                    	<!--<th>Barbers</th>-->
+                                        <th>Service</th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let service of serviceArray">
+                                            <!--<td>
+                                                 <label class="checkbox">
+                                                    <input type="checkbox" value="checked" data-toggle="checkbox">
+                                                 </label>
+
+                                        public id: string,
+                                        public customer: string,
+                                        public name?: string,
+                                        public date?: number,
+                                        public cost?: number,
+                                        public type?: string
+                                                 {{service.id}}
+                                            </td>-->
+                                        	<td>{{service.name}}</td>
+                                            <td>{{service.description }}</td>
+                                            <td><a href="#">€{{service.cost}}</a></td>
+                                            <td *ngIf="service.deal">Deal</td>
+                                        	<td *ngIf="!service.deal">Service </td>
+                                        	
+                                        <!--<td class="yellow">Service</td>-->
+                                            <td class="td-actions text-right">
+                                             <!--<button type="button" rel="tooltip" title="Loyal Customer" class="btn btn-warning btn-simple btn-xs">
+                                                <i class="fa fa-bullseye"></i>
+                                            </button>-->
+                                            <button type="button" rel="tooltip" title="View Details"  class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Block Customer" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                        </tr>
+                                          
+                                 
+                          
+                                    </tbody>
+                                </table>
+                                
+                
+            </div>
+
+            
+        </div>
+    </div>
+</div>

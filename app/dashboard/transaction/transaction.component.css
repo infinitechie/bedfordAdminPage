@@ -1,0 +1,30 @@
+.card .stats a:first-child {
+    
+    padding-left: 0px;
+}
+
+.card .stats a {
+    
+    padding: 0 5px;
+}
+
+.card .stats {
+    padding-top: 15px;
+}
+
+ .btn-fill {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.green {
+   
+}
+
+.yellow {
+   
+}
+
+.red {
+    color: red;
+}

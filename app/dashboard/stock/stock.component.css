@@ -1,0 +1,44 @@
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    /*cursor: pointer;*/
+    border-style: none;
+}
+
+.card .stats a {
+    
+    padding: 0 5px;
+}
+
+.card .stats {
+    padding-top: 15px;
+}
+
+ .btn-fill {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+
+.table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align: middle;
+    font-size: 18px;
+    color: #444;
+}
+
+input[type='file'] {
+  color: transparent;
+  margin-left: 15px;
+  
+}
+
+.imageUpload {
+    text-align: left;
+}
+
+
+
+
+

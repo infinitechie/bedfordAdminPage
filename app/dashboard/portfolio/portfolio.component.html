@@ -1,0 +1,112 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <h1>Portfolio Images</h1>
+          
+
+                <!--<div class="form-group">
+
+                    <div *ngIf="currentUpload">
+  <div class="progress">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>
+  Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+</div>
+
+    <label>
+       <input type="file" (change)="detectFiles($event)">
+    </label>
+
+    <button
+            [disabled]="!selectedFiles"
+            (click)="uploadSingle()">
+
+      Upload Single
+    </button>
+
+</div>-->
+              
+                                
+                                                 <!--<label class="checkbox">
+                                                    <input type="checkbox" value="checked" data-toggle="checkbox">
+                                                 </label>-->
+                                                 <!--<div class="imageUpload">-->
+                                                 
+            <div *ngFor="let image of portfolioArray" class="col-md-3">
+                <div class="card">
+                    <!--<div class="alert alert-info" role="alert"><i class="fa fa-user"></i>Uploaded By James</div>-->
+                    <img src={{image.imageStorageRef}} />
+                    <div class="footer">
+                        <h5 class="pull-left">{{image.imageUrl}}</h5>
+                        <button [disabled]="!selectedFiles" (click)="updateBug(image)" class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Edit Image">
+                            <i class="fa fa-edit"></i>
+                        </button>
+
+                        <label>
+       <input type="file" (change)="detectFiles($event)">
+    </label>
+
+    <!--<button
+            [disabled]="!selectedFiles"
+            (click)="updateBug(image)">
+
+      Upload Single
+    </button>-->
+
+
+                        <!--<button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Delete Image">
+                            <i class="fa fa-times"></i>
+                        </button>-->
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+<!--<div class="col-md-4">
+                <div class="card">
+                    <div class="alert alert-warning" role="alert"><i class="fa fa-user"></i>Uploaded By Ian</div>
+                    <img src="assets/img/barb32.jpg" alt="">
+                    <div class="footer">
+                        <h5 class="pull-left">Sleek Blended Fade </h5>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Delete Image">
+                            <i class="fa fa-edit"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Edit Image">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                
+            </div>-->
+             
+
+                <!--<div class="col-md-4">
+                <div class="card">
+                    <div class="alert alert-success" role="alert"><i class="fa fa-user"></i>Uploaded By Aaron</div>
+                    <img src="assets/img/barb35.jpg" alt="">
+                    <div class="footer">
+                        <h5 class="pull-left">Tight All Round </h5>
+                        <button class="btn btn-info btn-sm btn-fill pull-right" rel="tooltip" title="Delete Image">
+                            <i class="fa fa-edit"></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm btn-fill pull-right" rel="tooltip" title="Edit Image">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                
+            </div>-->
+        </div>
+
+    
+        
+    </div>
+</div>

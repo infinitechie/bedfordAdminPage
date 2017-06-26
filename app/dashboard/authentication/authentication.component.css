@@ -1,0 +1,161 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.form-inline .input-group>.form-control.phoneNo  {
+    /*width: 150px;*/
+
+}
+
+.cancelButton {
+    /*display: inline-block;*/
+    
+    background-color: white;
+    color: mediumseagreen;
+    border: 1px solid mediumseagreen;
+    border-radius: 8px;
+    height: 45px;
+    width: 135px;
+    outline: none;
+    margin-right: 60px;
+    /*float: left;*/
+}
+
+.registerButton {
+    /*display: inline-block;*/
+    background-color: mediumseagreen;
+    color: white;
+    border: 1px solid mediumseagreen;
+    border-radius: 8px;
+    height: 45px;
+    width: 135px;
+    outline: none;
+    margin-left: 60px;
+    /*float: right;*/
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#buttonUpload {
+    /*float: left;*/
+}
+
+.form-inline {
+    margin: 20px;
+}
+
+
+.form-inline .input-group>.form-control {
+    width: 250px;
+}
+
+.form-inline .input-group.phoneNumber {
+    /*width: 450px;*/
+}
+
+.form-control  {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid lightblue;
+    border-radius: 0px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    width: 305px;
+    text-align: center;
+
+}
+
+.input-group-addon {
+    border-radius: 0px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid lightblue;
+
+}
+
+.form-inline .form-group.buttons {
+    margin-top: 10px;
+}
+
+.custom-file-choose {
+    font-size: 12px;
+    border: 1px solid #11bfe3;
+    background-color: white;
+    color: #11bfe3;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #11bfe3;
+    color: white;
+    border: none;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-file-upload:disabled {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: rgba(18,191,227,0.5);
+    color: white;
+    border: none;
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: not-allowed;
+    
+}
+
+.form-inline .form-group {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*.form-inline .form-group.upload {
+    margin-left: 50px;
+}*/
+
+/*.currencyinput {
+    border: 4px inset #ccc;
+}
+.currencyinput input {
+    border: 0;
+}*/
+
+/*.form-groupnumber{
+    background-color:#FFF;
+}*/
+
+.input-group-addon {
+    background-color: #fff;
+}
+.input-group .input-group-addon + .form-control
+{
+    border-left:none;
+}

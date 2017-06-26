@@ -1,0 +1,238 @@
+<div class="modal fade" [id]="modalDeleteUser" data-backdrop="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+             <div class="modal-body">
+
+                   <!--<h3 class="first">Basic</h3>
+<p-autoComplete [(ngModel)]="country" [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" [size]="30"
+    placeholder="Customer" [minLength]="1"></p-autoComplete>
+<span style="margin-left:10px">Email: {{customerEmail}}</span>-->
+            
+            <!--<h2>Booking Details</h2>
+            <br>-->
+
+            <div class="userDetails">
+            
+            <!--<h4 class="">{{customer.id}}</h4>
+            <br>
+            <h4 class="">{{customer.name}}</h4>
+            <br>
+            <h4 class="">{{customer.expenditure}}</h4>
+            <br>
+            <h4 class="">{{customer.hasApp}}</h4>
+            <br>
+            <h4 class="">{{customer.notes}}</h4>-->
+
+<!--All goes in one form (UserForm)
+            Cost of booking
+            Type of booking
+            Time selected*
+            Customer for booking
+
+
+All goes in dropdown box
+            Customer's name
+            Customer's number + email
+            Customer's bookings
+            Customer Credit
+            Notes
+            Expenditure
+            Loyalty-->
+
+
+        
+           
+<form [formGroup]="notBookedForm">         
+
+                <h2 *ngIf="!customer">Create New Booking</h2>
+                <h2 *ngIf="customer"> Booking Details</h2>
+                
+                <h4>{{bookingTime}}</h4>
+
+                <fieldset *ngIf="!customer" class="form-inline">
+ <div class="form-group email" id="title-form-group">
+                            <label for="title-field">Customer Name </label>
+                            <label for="title-field" class="sr-only">name</label>
+                <p-autoComplete formControlName="country"  [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" [size]="30"
+    placeholder="Customer" [minLength]="1"></p-autoComplete>
+
+</div>
+
+
+
+<div class="form-group number" id="title-form-group">
+                            <label for="title-field"> Email </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Name" formControlName="customerEmail">
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+</div>
+
+<div class="form-group email" id="title-form-group">
+                            <label for="title-field">Service Booked</label>
+                            <label for="title-field" class="sr-only">name</label>
+                <p-autoComplete formControlName="service"  [suggestions]="filteredServicesSingle" (completeMethod)="filteredServiceSingle($event)" [size]="30"
+    placeholder="Service" [minLength]="1"></p-autoComplete>
+
+</div>
+
+<div class="form-group number" id="title-form-group">
+                            <label for="title-field"> Cost €</label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Name" formControlName="costOfService">
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+
+</div>
+
+
+<!--<div class="form-group email" id="title-form-group">
+                            <label for="title-field"> Time </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Name" formControlName="bookingTime">
+                            
+
+</div>-->
+
+<!--<button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="cashOut()">Cash Out</button>-->
+
+</fieldset>
+</form>
+<form [formGroup]="userForm">
+    <!--<h2 *ngIf="customer">Already Booked</h2>-->
+              <fieldset *ngIf="customer" class="form-inline">
+
+<div class="row">
+                 
+
+                        <div class="form-group email" id="title-form-group">
+                            <label for="title-field">Service Booked </label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Name" formControlName="name">
+                        </div>
+
+                        <div class="form-group number" id="title-form-group">
+                            <label for="title-field"> Expenditure €</label>
+                            <label for="title-field" class="sr-only">name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Name" formControlName="expenditure">
+                            <!--<span class="emailInput" *ngIf="customerEmail" > {{customerEmail}}</span>-->
+                        </div>
+
+                        
+
+                        
+                         <div class="form-group number" id="title-form-group">
+                            <label for="title-field">Email</label>
+                            <label for="title-field" class="sr-only">email</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Email" formControlName="email">
+                        </div>
+                    
+
+                    
+                         <div class="form-group email" id="title-form-group">
+                             <label for="title-field"> Account Balance €</label>
+                            <label for="title-field" class="sr-only">credit</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Credit" formControlName="credit">
+                        </div>
+
+                     
+
+
+                        <div class="form-group number" id="title-form-group">
+                            <label for="title-field">Cost</label>
+                            <label for="title-field" class="sr-only">Phone Number</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Number" formControlName="phoneNumber">
+                        </div>
+
+                            <div class="form-group email" id="title-form-group">
+                             <label for="title-field">Customer Notes</label>
+                            <label for="title-field" class="sr-only">notes</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Notes" formControlName="notes">
+                        </div>
+
+                        <div class="form-group email" id="title-form-group">
+                             <label for="title-field">Customer Name</label>
+                            <label for="title-field" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="title-field" placeholder="User Notes" formControlName="customerName">
+                        </div>
+
+                        <!--<div class="form-group float-xs-right">
+                            <label for="status-dropdown" class="sr-only">Status</label>
+                            <select id="status-dropdown" class="form-control btn btn-primary" formControlName="status">
+                                <option *ngFor="let status of statusArr" [value]="status">{{ statuses[status] }}</option>
+                            </select>
+                        </div>-->
+                     
+                        </div>
+                        <div class="buttonsForTopUp">
+                         <button class="btn btn-secondary btn-xl" type="button" data-dismiss="modal" (click)="cancelTransaction()">Make Loyal</button>
+                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="cashOut()">Top Up</button>
+                        </div>
+                        </fieldset>
+            </form>
+<!--<div *ngIf="!isThereBookings" class="noBookings">
+    <h1>No Bookings Yet!!</h1>
+</div>-->
+<div *ngIf="isThereBookings" class="holdsBookings">
+                                <h3>Bookings</h3>
+                         <div  class="backroundWhite">
+                             
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>ID</th>
+                                    	<th>Name</th>
+                                    	<th>Date</th>
+                                    	<th>Cost</th>
+                                    	<th>Status</th>
+                                        <th>Service</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let booking of Bookings">
+                                            <td>
+                                                 <!--<label class="checkbox">
+                                                    <input type="checkbox" value="checked" data-toggle="checkbox">
+                                                 </label>-->
+
+                                        <!--public id: string,
+                                        public customer: string,
+                                        public name?: string,
+                                        public date?: number,
+                                        public cost?: number,
+                                        public type?: string-->
+                                                 {{booking.id}}
+                                            </td>
+                                        	<td>{{booking.customer}}</td>
+                                            <td><a href="#">{{booking.date | date :'fullDate' }}</a></td>
+                                        	<td>€{{booking.cost}}</td>
+                                        	<td>{{booking.type | capitalize }}</td>
+                                            <td class="yellow">{{booking.name}}</td>
+                                            <td class="td-actions text-right">
+                                             <button type="button" rel="tooltip" title="Loyal Customer" class="btn btn-warning btn-simple btn-xs">
+                                                <i class="fa fa-bullseye"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="View Details"  class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Block Customer" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                        </tr>
+                                          
+                                 
+                          
+                                    </tbody>
+                                </table>
+</div>
+</div>
+             </div>
+
+            <div class="modal-footer">
+                    <div class="row">
+                        <button class="btn btn-secondary btn-xl" type="button" data-dismiss="modal" (click)="cancelTransaction()">Cancel</button>
+                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="cashOut()">Cash Out</button>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>

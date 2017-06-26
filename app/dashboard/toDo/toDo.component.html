@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="card" [@cardupgrade]>
+                    <div class="header text-center">
+                        <h2> ToDo List<button [attr.data-target]=" '#' + createTask.modalId" data-toggle="modal" (click)="createTask.configureForm()" class="addTaskBtn"> <i class="fa fa-plus"></i></button></h2>
+                        <br>
+                    </div>
+                    <div class="content table-responsive table-full-width table-upgrade">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">Completed</th>
+                                    <th class="text-center">Assigned</th>
+                                    <th class="text-center">Date Added</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let task of tasks">
+                                    <td>{{task.name}}</td>
+                                    <td>{{task.completed}}</td>
+                                    <td>{{task.staffMemberAssigned}}</td>
+                                    <td>{{task.dateCompleted}}</td>
+                                   <button (click)="createTask.completeTask(task)"> <td><i class="fa fa-times text-danger"></i></td> </button>
+                                   <button [attr.data-target]=" '#' + createTask.modalId" data-toggle="modal" (click)="createTask.configureForm(task)"> <td><i class="fa fa-check text-success"></i></td> </button>
+                                   <button (click)="deleteUser(task)"> <td><i class="fa fa-check text-success"></i></td> </button>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <!--<button [attr.data-target]=" '#' + createTask.modalId" data-toggle="modal" (click)="createTask.configureForm()"></button>-->
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<createTask #createTask></createTask>
+    </div>
+</div>

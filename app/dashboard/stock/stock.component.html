@@ -1,0 +1,96 @@
+ 
+ 
+ <div class="main-content">
+            <div class="container-fluid">
+                <editStockComponent #editStockComponent></editStockComponent>
+                    <div class="col-md-12">
+                        <div class="card card-posts">
+                            <div class="header">
+                                <h4 class="title">Current Stock<a href="#" class="btn btn-info btn-fill">Add Product</a></h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="stats">
+                                            <a href="#">ID</a>|
+                                            <a href="#">Name</a>|
+                                            <a href="#">Total Sales</a>|
+                                            <a href="#">Current Stock</a>|
+                                            <a href="#">Units Sold</a>|
+                                            <a href="#">VAT</a>
+
+                                        </div>
+                                    </div>
+
+                    <div class="col-md-6">
+                    <form class="form-inline pull-right">
+                        
+                    <div class="form-group">
+                        <label class="sr-only">Search</label>
+                            <input type="input" class="form-control" id="inputPassword2" placeholder="Search...">
+                    </div>
+                            <button type="submit" [attr.data-target]=" '#' + editStockComponent.modalId" data-toggle="modal" (click)="editStockComponent.configureForm()" class="btn btn-default">Search Stock</button>
+                    </form>
+                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Image</th>
+                                    	<th>Name</th>
+                                    	<th>Cost</th>
+                                    	<th>Current Stock</th>
+                                        <th>Units Sold</th>
+                                        <th>VAT %</th>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let stock of stockArray">
+                                              <td>
+                                                 <!--<label class="checkbox">
+                                                    <input type="checkbox" value="checked" data-toggle="checkbox">
+                                                 </label>-->
+                                                 <!--<div class="imageUpload">-->
+                                                 <img src={{stock.imageStorageRef}} />
+                                                  <!--</div>-->
+                                                  <!--<label>
+       <input type="file" (change)="detectFiles($event)">
+    </label>-->
+                                                     <!--<div *ngIf="currentUpload">-->
+
+                                                         <!--[disabled]="!selectedFiles"(click)="uploadSingle(stock)"-->
+  <!--<div class="progress">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>-->
+  <!--Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete-->
+<!--</div>-->
+   
+                                            </td>
+                                        	<td>{{stock.name}}</td>
+                                            <td><a href="#">€{{stock.cost}}</a></td>
+                                        	<td>{{stock.currentStock}}</td>
+                                        	<td>{{stock.unitsSold}}</td>
+                                            <td class="yellow">{{stock.vat}}</td>
+                                            <td class="td-actions text-right">
+                                             <button type="button" rel="tooltip" title="Sales Log" class="btn btn-warning btn-simple btn-xs">
+                                                <i class="fa fa-bullseye"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Edit Details" [attr.data-target]=" '#' + editStockComponent.modalId" data-toggle="modal" (click)="editStockComponent.configureForm(stock)"  class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Delete Product" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
